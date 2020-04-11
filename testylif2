@@ -1,0 +1,112 @@
+/**
+ * 
+ */
+package br.com.hospitalifnew.modeltestyy;
+
+import java.time.LocalDate;
+
+/**
+ * @author Dani
+ *
+ */
+public class Pessoa {
+
+	private long id;
+	private String nome;
+	private String endereco;
+	private String email;
+	private String fone;
+	private LocalDate datanasc;
+
+	/**
+	 * 
+	 */
+	public Pessoa() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @return the id
+	 */
+	public long getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the nome
+	 */
+	public String getNome() {
+		return nome;
+	}
+
+	/**
+	 * @param nome the nome to set
+	 */
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	/**
+	 * @return the endereco
+	 */
+	public String getEndereco() {
+		return endereco;
+	}
+
+	/**
+	 * @param endereco the endereco to set
+	 */
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	/**
+	 * @return the email
+	 */
+	public String getEmail() {
+		return email;
+	}
+
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	/**
+	 * @return the fone
+	 */
+	public String getFone() {
+		return fone;
+	}
+
+	/**
+	 * @param fone the fone to set
+	 */
+	public void setFone(String fone) {
+		this.fone = fone;
+	}
+
+	/**
+	 * @return the datanasc
+	 */
+	public LocalDate getDatanasc() {
+		return datanasc;
+	}
+
+	/**
+	 * @param datanasc the datanasc to set
+	 */
+	public void setDatanasc(LocalDate datanasc) {
+		this.datanasc = datanasc;
+	}
+
+}
