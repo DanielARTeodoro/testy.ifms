@@ -4,4 +4,21 @@
  * and open the template in the editor.
  */
 
+/**
+ * 
+ */
 package br.com.hospitalif.rascunho;
+
+/*
+ * /**
+ * 
+ * @author Daniel
+ *
+ *
+ */
+/*
+ * public class HomeController {
+ * 
+ * }
+ * 
+ */
