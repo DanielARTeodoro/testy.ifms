@@ -5,9 +5,20 @@
  */
 
 /**
- *
- * @author Daniel
  * 
  */
 
 package br.com.hospitalif.model;
+
+public class Home {
+
+	/// Painel Principal (Home) para os botões do sistema.
+
+	/**
+	 * 
+	 */
+	public Home() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
