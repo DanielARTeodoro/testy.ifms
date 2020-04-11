@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<!-- titulo da tela -->
+<title>Cadastro de Cliente Juridico</title>
+</head>
+<body>
+<!-- Cabeçalho -->
+	<h2>Clientes</h2>
+	<h:form>
+	<!-- Descrição -->
+		<h:outputLabel value="Nome :" />
+		<!-- Campo de preenchimento -->
+		<h:inputText value="#{cliente_Bean.cliente.Nome}" required="true" />
+
+		<h:outputLabel value="Endereco :" />
+		<h:inputText value="#{cliente_Bean.cliente.Endereco}" required="true" />
+
+		<h:outputLabel value="e-mail :" />
+		<h:inputText value="#{cliente_Bean.cliente.email}" required="true" />
+
+		<h:outputLabel value="Telefone :" />
+		<h:inputText value="#{cliente_Bean.cliente.Fone}" required="true" />
+
+		<h:outputLabel value="Data Nascimento :" />
+		<h:inputText value="#{cliente_Bean.cliente.dataNasc}" required="true" />
+
+		<h:outputLabel value="CNPJ :" />
+		<h:inputText value="#{cliente_Bean.cliente.cnpj_pj}" required="true" />
+
+		<h:outputLabel value="IE :" />
+		<h:inputText value="#{cliente_Bean.cliente.ie}" required="true" />
+
+		<h:panelGrid>
+		<!-- Botão -->
+			<h:commandButton action="#{cliente_Bean.addCliente()}" value="Salvar" />
+			<h:messages showDetail="true" showSummary="false" />
+		</h:panelGrid>
+
+	</h:form>
+</body>
+</html>
