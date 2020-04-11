@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+<h:title>
+Login
+</h:title>
+</h:head> 
+<h:body> 
+
+<h:form>
+    <h:panel header="Validate">
+        <p:messages>
+            <p:autoUpdate />
+        </p:messages>
+ 
+        <h:panelGrid id="grid" columns="4" cellpadding="5">
+            <h:outputLabel for="name" value="Name:" style="font-weight:bold"/>
+            <p:inputText id="name" value="#{validationView.text}" required="true" label="Name"/>
+            <p:message for="name" />
+            <h:outputText value="#{validationView.text}" />
+ 
+            <h:outputLabel for="number" value="Number:" style="font-weight:bold"/>
+            <p:inputText id="number" value="#{validationView.integer}" label="Number">
+                <f:validateDoubleRange minimum="5" maximum="8" />
+            </p:inputText>
+            <p:message for="number" />
+            <h:outputText value="#{validationView.integer}" />
+            <p:commandButton value="Non-Ajax" ajax="false" icon="pi pi-check" validateClient="true" style="margin-right:10px"/>
+         </h:panelGrid>
+         </h:panel>
+</h:form>
+
+</h:body> 
+</html>

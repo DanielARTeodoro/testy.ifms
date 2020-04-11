@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:mj="http://mojarra.dev.java.net/mojarra_ext">
+
+<h:head>
+	<h:title>Produto</h:title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:txtfield value="#{produto_Bean.pd.descricao}" />
+		<h:txtfield value="#{produto_Bean.pd.estoque}" />
+		<h:txtfield value="#{produto_Bean.pd.estoque_min}" />
+		<h:txtfield value="#{produto_Bean.pd.valor}" />
+		itemns
+		<h:column>
+			<f:facet name="header">Valor</f:facet>
+			<h:commandButton action="#{produto_Bean.pd.novoProduto(Produto)}"
+				value="Update" />
+		</h:column>
+		estoque min
+		<h:column>
+			<f:facet name="header">Valor</f:facet>
+			<h:commandButton action="#{produto_Bean.pd.novoProduto(Produto)}"
+				value="Update" />
+		</h:column>
+		max
+		<h:column>
+			<f:facet name="header">Valor</f:facet>
+			<h:commandButton action="#{produto_Bean.pd.novoProduto(Produto)}"
+				value="Update" />
+		</h:column>
+		<h:column>
+		valor
+		<f:facet name="header">Valor</f:facet>
+			<h:commandButton action="#{produto_Bean.pd.novoProduto(Produto)}"
+				value="Update" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">Update</f:facet>
+			<h:commandButton action="#{produto_Bean.pd.editProduto(Produto)}"
+				value="Update" class="ui-grlarity-prmary" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">Delete</f:facet>
+			<h:commandButton action="#{produto_Bean.pd.deleteProduto(Produto)}"
+				value="Update" class="ui-grlarity-prmary" />
+			</h:column>
+	</h:form>
+	<h:form>
+		<DataTable value="#{produto_Bean.pd.produto}"> <Column
+			field="itens" header="Itens" /> <Column field="estoqueMin"
+			header="EstoqueMin" /> <Column field="estoqueMax"
+			header="EstoqueMax" /> <Column field="valor" header="Valor" /> </DataTable>
+		</h:form>
+</h:body>
+</html>

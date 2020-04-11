@@ -6,11 +6,15 @@
 	xmlns:mj="http://mojarra.dev.java.net/mojarra_ext">
 
 <h:head>
-	<h:title>Cliente</h:title>
+	<h:title>Pessoa</h:title>
 </h:head>
 <h:body>
 	<h:form>
-		<h:txtfield value="#{cliente_Bean.c.data_cadastro}" />
+		<h:txtfield value="#{pessoa_Bean.p.nome}" />
+		<h:txtfield value="#{pessoa_Bean.p.endereco}" />
+		<h:txtfield value="#{pessoa_Bean.p.email}" />
+		<h:txtfield value="#{pessoa_Bean.p.fone}" />
+		<h:txtfield value="#{pessoa_Bean.p.datanasc}" />
 	</h:form>
 </h:body>
 </html>
