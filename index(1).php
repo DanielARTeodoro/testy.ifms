@@ -14,15 +14,15 @@
                 <form class="row" id="cadItens">
                     <label class="col-md-2">
                         Quantidade: 
-                        <input id="txtQtde" required type="number" name="campoQtde" class="form-control" />
+                        <input required type="number" name="campoQtde" class="form-control" />
                     </label>
                     <label class="col-md-5">
                         Item: 
-                        <input id="txtItem" required type="text" name="campoItem" class="form-control" />
+                        <input required type="text" name="campoItem" class="form-control" />
                     </label>
                     <label class="col-md-3">
                         Tipo 
-                        <select id="cboTipo" name="campoTipo" class="form-control">
+                        <select name="campoTipo" class="form-control">
                             <option value="">Selecione</option>
                             <option value="UNI">Unidade</option>
                             <option value="KG">Kilo</option>
@@ -35,14 +35,11 @@
                     </label>
 
                 </form>
-                <div class="escondedor alert alert-dismissible fade show col-6 offset-3" role="alert">
+                <div class="alert alert-dark alert-dismissible fade show col-6 offset-3" role="alert">
                     <span class="msg">Mensagem</span>
                     <button type="button" class="close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
-                <div class="col-6 offset-3" id="lista">
-                    
                 </div>
             </div>
         </div>
@@ -50,7 +47,6 @@
         <script src="js/bootstrap.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(document).ready(function(){
-                lista();
                 // Cria função para submissão do formulário
                 $("#cadItens").submit(function(){
                     // Pega dados do formulário e armazena 
@@ -64,37 +60,11 @@
                         async: true,
                         data: item,
                         success: function(resp) {
-                            //alert(resp.msg);
-                            $('.msg').html(resp.msg);
-                            $('.escondedor').removeClass("alert-success");
-                            $('.escondedor').removeClass("alert-danger");
-                            $('.escondedor').addClass(resp.class);
-                            $('.escondedor').show();
-                            if(resp.status == 1) {
-                                lista();
-                                $('#txtQtde').val('');
-                                $('#txtItem').val('');
-                                $('#cboTipo').val('');
-                            }
+                            alert(resp.msg);
                         }
                     });
                     return false;
                 });
-                $('.close').click(function() {
-                    $('.escondedor').hide();
-                });
-                // Busca lista
-                function lista() {
-                    $.ajax({
-                        type: 'POST',
-                        dataType: 'json',
-                        url: 'buscaLista.php',
-                        success: function(dados) {
-                            $('#lista').html(dados.lista);
-                        }
-                    });
-                }
-                // Final busca lista
             });
             
          
